@@ -1,0 +1,54 @@
+$primary-color: #adadad;
+$secondary-color: #ff6600;
+$tertiary-color: #00a3ff;
+$background-opacity: 0.9;
+
+@mixin easeOut {
+  transition: all 0.5s ease-in-out;
+}
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Media Query Mixins
+@mixin mediaSm {
+  @media only screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media only screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media only screen and (min-width: 1171px) {
+    @content;
+  }
+}
+
+// @mixin orientPort {
+//   @media only screen and (orientation: portrait) {
+//     @content;
+//   }
+// }
+
+@mixin orientLand {
+  @media only screen and (orientation: landscape) {
+    @content;
+  }
+}
