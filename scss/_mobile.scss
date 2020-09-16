@@ -6,6 +6,26 @@
 @include mediaLg {
 }
 
+@media only screen and (min-width: 538px) {
+    .testimonials__testimonial{
+        // padding-top: 1.9375rem;
+        // font-size: 0.6875rem;
+        // line-height: 0.8125rem;
+        margin-right: 1.8125rem;
+      
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3){
+          padding-top: 0;
+        }
+        &:nth-child(3),
+        &:nth-child(6){
+          margin-right: 0;
+        } 
+      }
+}
+
+
 // Tablets & Small Laptops
 @include mediaMd {
     .menu__menu-mobile{
@@ -195,14 +215,17 @@
     }
 
     .img-container__circles{
-        position: absolute;
-        top: 3.7rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 16.32rem;
         left: 2.25rem;
-        z-index: -1;
     }
 
     .circles__circle{
-        display: inline-block;
+        position: absolute;
+        z-index: -1;
     }
 
     .img-container__person{
@@ -215,6 +238,69 @@
         background-size: auto;
     }
 
+    .section-testimonials__testimonials{
+        max-width: 100%;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    .testimonials__testimonial{
+        min-width: 26%;
+        font-size: 1rem;
+        line-height: 1.1875rem;
+        padding-top: 0;
+        margin-right: 0;
+        &:nth-child(1){
+            order: 5;
+        }
+        &:nth-child(2){
+            order: 4;
+        }
+        &:nth-child(3){
+            order: 1;
+            padding-bottom: 3rem;
+        }
+        &:nth-child(4){
+            order: 6;
+        }
+        &:nth-child(5){
+            order: 2;
+            padding-bottom: 3rem;
+        }
+        &:nth-child(6){
+            order: 3;
+            padding-bottom: 3rem;
+        }
+        &:nth-child(odd){
+            margin-right: 0;
+        }
+    }
+    .testimonial__icon{
+        height: 100%;
+        text-align: left;
+    }
+    .testimonial__title{
+        text-align: left;
+    }
+    .testimonial__text-container{
+        text-align: left;
+    }
+
+    .inserted-text-1{
+        &::before{
+            content: ', зачисляем круглый год!';
+        }
+    }
+
+    .testimonial__icon svg{
+        width: 5.09rem;
+        height: 4.75rem;
+    }
+    .icon__checked-list{
+        width: 5.09rem;
+        height: 4.75rem;
+    }
+
     .section-ask-questions{
         display: none;
     }
@@ -224,30 +310,18 @@
     }
 }
 
+@media only screen and (max-width: 1230px) {
+    .container{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
 // Smartphones
 @include mediaSm {
 }
 
 @include orientLand {
-}
-
-@media only screen and (min-width: 538px) {
-    .testimonials__testimonial{
-        padding-top: 1.9375rem;
-        font-size: 0.6875rem;
-        line-height: 0.8125rem;
-        margin-right: 1.8125rem;
-      
-        &:nth-child(1),
-        &:nth-child(2),
-        &:nth-child(3){
-          padding-top: 0;
-        }
-        &:nth-child(3),
-        &:nth-child(6){
-          margin-right: 0;
-        } 
-      }
 }
 
 @media only screen and (max-width: 364px) {
